@@ -5,7 +5,7 @@ import { ensureError } from "../../helpers/ensure-error.js";
 
 const CreateClientContactTool = CreateSodiumTool(
   "create-client-contact",
-  "Create a new contact for a client in SodiumHQ. Returns the created contact's code and details.",
+  "Create a new contact for a client in SodiumHQ. A client must have at least one contact before engagement document generation will work — create a contact first if list-client-contacts returns empty. Returns the created contact's code and details.",
   {
     clientCode: z.string().describe("The client code to add the contact to (required)"),
     firstName: z.string().optional().describe("Contact's first name"),

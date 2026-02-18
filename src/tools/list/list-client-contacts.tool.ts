@@ -18,7 +18,7 @@ function formatContact(contact: ClientContact): string {
 
 const ListClientContactsTool = CreateSodiumTool(
   "list-client-contacts",
-  "List all contacts for a specific client. Returns contact names, email addresses, phone numbers, and types.",
+  "List all contacts for a specific client. Returns contact names, email addresses, phone numbers, and types. At least one contact must exist before engagement document generation will succeed — check this before creating an engagement.",
   {
     clientCode: z.string().describe("The client code to list contacts for"),
   },
